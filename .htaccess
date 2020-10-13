@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} robots.txt$ [NC]
+RewriteRule ^([^/]+) $1 [L]
+
+RewriteCond %{HTTP_HOST} ^m2barber\.com.ua
+RewriteRule ^(.*)$ http://m2collab.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.m2barber\.com.ua
+RewriteRule ^(.*)$ http://m2collab.com/$1 [R=301,L]
